@@ -8,8 +8,4 @@ from log_reader import KeywordFinder, LineCounter
 
 lc = LineCounter("textfile.txt")
 
-try:
-    while True:
-        next(lc)
-except StopIteration:
-    lc.get_line_count()
+lc.get_line_count()
