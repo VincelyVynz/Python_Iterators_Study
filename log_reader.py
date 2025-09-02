@@ -40,28 +40,29 @@ class KeywordFinder:
 class LineCounter:
     def __init__(self, filename):
         self.filename = filename
+        self.content = open(self.filename, 'r')
         self.line_count = 0
-        try:
-            self.contents = open(self.filename, 'r')
-        except FileNotFoundError:
-            print(f"Error! Could not find {self.filename}")
+        self.word_count = 0
+        self.processed = False
 
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        line = self.contents.readline()
-        if line:
-            self.line_count += 1
+    def process_file(self):
+        line = self.content.readline()
+        if line == "":
+            self.content.close()
+            self.processed = True
             return self.line_count
         else:
-            self.contents.close()
-            self.total_lines = self.line_count
-            self.get_line_count()
-            return self.total_lines
+            self.line_count += 1
+            self.word_count += len(line.split())
+            self.process_file()
 
     def get_line_count(self):
-        if self.contents.closed:
-            print(self.total_lines)
-        else:
-            self.__next__()
+        if not self.processed:
+            self.process_file()
+        print(self.line_count)
+
+    def get_word_count(self):
+        if not self.processed:
+            self.process_file()
+        print(self.word_count)
+
