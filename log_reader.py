@@ -41,7 +41,7 @@ class LineCounter:
     def __init__(self, filename):
         self.filename = filename
         try:
-            self.contents = open(self.filename, 'r')
+            self.content = open(self.filename, 'r')
         except FileNotFoundError:
             print(f"Could not find {self.filename}")
         self.line_count = 0
