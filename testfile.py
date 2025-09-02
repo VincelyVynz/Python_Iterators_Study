@@ -1,5 +1,5 @@
 from counter import Counter
-from log_reader import KeywordFinder, LineCounter
+from keyword_finder import KeywordFinder, LineCounter
 
 # story = KeywordFinder('textfile.txt', keyword="error")
 #
