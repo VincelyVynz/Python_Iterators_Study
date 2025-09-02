@@ -40,7 +40,10 @@ class KeywordFinder:
 class LineCounter:
     def __init__(self, filename):
         self.filename = filename
-        self.content = open(self.filename, 'r')
+        try:
+            self.contents = open(self.filename, 'r')
+        except FileNotFoundError:
+            print(f"Could not find {self.filename}")
         self.line_count = 0
         self.word_count = 0
         self.processed = False
