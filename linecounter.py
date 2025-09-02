@@ -14,7 +14,7 @@ class LineCounter:
 
     def process_file(self):
         if self.content is not None:
-            line = self.content.readline().strip()
+            line = self.content.readline()
             if line == "":
                 self.content.close()
                 self.processed = True
