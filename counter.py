@@ -11,7 +11,7 @@ class Counter:
         """
                Initializes the counter.
 
-               """
+        """
         self.count = count
         self.current = 0
 
