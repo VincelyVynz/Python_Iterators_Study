@@ -66,8 +66,8 @@ class KeywordFinder:
     def print_keyword_line(self):
 
         """
-                Recursively prints each line in the file that contains the keyword.
-                Stops when all matches have been printed.
+        Recursively prints each line in the file that contains the keyword.
+        Stops when all matches have been printed.
         """
         try:
             print(self.__next__())

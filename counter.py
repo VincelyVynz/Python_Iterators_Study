@@ -9,8 +9,7 @@ class Counter:
 
     def __init__(self, count):
         """
-               Initializes the counter.
-
+        Initializes the counter.
         """
         self.count = count
         self.current = 0
@@ -29,7 +28,6 @@ class Counter:
     def print_number(self):
         """
         Prints the number one by one till the limit is reached
-
         """
         try:
             print(self.__next__())
