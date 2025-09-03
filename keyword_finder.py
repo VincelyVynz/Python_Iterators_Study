@@ -6,6 +6,7 @@ class KeywordFinder:
     def __init__(self, filename, keyword):
         self.filename = filename
         self.keyword = keyword.lower()
+        self.keyword_count = 0
         self.keyword_line = None
         try:
             self.contents = open(self.filename, 'r')
@@ -20,10 +21,12 @@ class KeywordFinder:
         if line:
             if self.keyword in line.lower():
                 self.keyword_line = line
-                return self.keyword_line
+                self.keyword_count += 1
+                return f"{self.keyword_count} - {self.keyword_line}"
             else:
                 return self.__next__()
         else:
+            print (f"Number of lines with the keyword {self.keyword} = {self.keyword_count}")
             self.contents.close()
             raise StopIteration
 
