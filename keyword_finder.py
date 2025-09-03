@@ -1,6 +1,4 @@
-# TODO 1 Find and print lines containing they keyword
-# TODO 2 Count the number of times the keyword is repeated.
-# TODO 3 Count total number of lines and words
+# ---------------------------- Keyword Finder ---------------------------- #
 
 class KeywordFinder:
     def __init__(self, filename, keyword):

@@ -1,4 +1,4 @@
-class Counter():
+class Counter:
     def __init__(self, count):
         self.count = count
         self.current = 0
