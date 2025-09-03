@@ -2,12 +2,15 @@ from counter import Counter
 from keyword_finder import KeywordFinder
 from linecounter import LineCounter
 
-# story = KeywordFinder('textfile.txt', keyword="[ERROR]")
+story = KeywordFinder('textfile.txt', keyword="[ERROR]")
+
+story.print_keyword_line()
+
+
+# lc = LineCounter("textfile.txt")
 #
-# story.print_keyword_line()
+# lc.get_line_count()
+# lc.get_word_count()
 
-
-lc = LineCounter("textfile.txt")
-
-lc.get_line_count()
-lc.get_word_count()
+counter = Counter(5)
+counter.print_number()
