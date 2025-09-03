@@ -2,7 +2,7 @@ from counter import Counter
 from keyword_finder import KeywordFinder
 from linecounter import LineCounter
 
-story = KeywordFinder('textfile.txt', keyword="error")
+story = KeywordFinder('textfile.txt', keyword="[ERROR]")
 
 story.print_keyword_line()
 

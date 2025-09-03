@@ -18,7 +18,7 @@ class KeywordFinder:
     def __next__(self):
         line = self.contents.readline()
         if line:
-            if self.keyword in line:
+            if self.keyword in line.lower():
                 self.keyword_line = line
                 return self.keyword_line
             else:
